@@ -1,0 +1,31 @@
+h1,h2,h3,h4,h5,h6,p,select,img,body,html,strong,b,i,em,span,dl,dd,dt,form,fieldset,legend,section,aside,header,nav,footer,article,a,input,ul,ol,li{
+    font-style:normal;font-weight: normal;
+    margin: 0;padding:0;
+}
+fieldset,img{
+    border:none;
+}
+ul li ,ol li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#fff;
+}
+body{
+    color:#333;font:12px "微软雅黑","宋体";
+}
+.clearfix:after{
+    content: "";clear:both;overflow: hidden;visibility: hidden;
+    height:0;font-size:0;display: block;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+input,select{
+    border:0;
+    outline:none;
+}
