@@ -9,7 +9,7 @@
  Vue.use(Router);
 
  const routes = [
-     home,
+      home,
       handpink,
       discovery,
       mine,

@@ -2,8 +2,7 @@
 <nav class="tab-bar border-top">
     <template v-for="tabItem in tabData">
         <router-link class="tab-item" :key="tabItem.id" 
-            :to="tabItem.path">
-            <span></span>
+            :to="tabItem.path"> 
             <span>{{tabItem.name}}</span>
         </router-link>
     </template>
@@ -30,7 +29,8 @@ export default {
 <style lang="scss" scoped>
 .tab-bar{
     width: 100%;
-    height: 49px;
+    height: 1.306667rem; //49px
+    line-height: 1.306667rem; //49px
     position: absolute;
     left: 0;
     bottom: 0;
@@ -39,30 +39,20 @@ export default {
     .tab-item{
         flex: 1;
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
+        align-items: center;
         span:nth-of-type(1){
-            height: 24px;
-            width: 24px;
-            margin: 4px auto 0;
-            background-image: url('/images/tab.png');
-            background-size: 100%;
-            background-position: 0 -100px;
-        }
-        span:nth-of-type(2){
+            height: 100%; 
             flex: 1;
-            text-align: center;
+            text-align: center; 
         }
-        font-size: 14px;
+        font-size: .373333rem;//14px
     }
-    .tab-item:nth-of-type(1){
-        span:nth-of-type(1){
-            background-position: 0 -30px;
-        }
-    }
-    .tab-item.router-link-active:nth-of-type(1){
-        span:nth-of-type(1){
-            background-position: 0 -40px;
-        }
+     
+    .tab-item.router-link-active{
+         
+           background:lightsalmon;
+         
     }
 }
 </style>

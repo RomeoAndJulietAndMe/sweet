@@ -1,4 +1,4 @@
 export default {
     path:'/mine',
-    component: ()=>import('../pages/home/Home/Home'),
+    component: ()=>import('../pages/mine/Mine/Mine'),
 }
