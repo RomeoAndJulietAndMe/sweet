@@ -5,6 +5,7 @@
  import handpink from './handPinkRouter'
  import discovery from './discoveryRouter'
  import mine from './mineRouter'
+ import guide from './guideRouter'
 
  Vue.use(Router);
 
@@ -13,9 +14,19 @@
       handpink,
       discovery,
       mine,
+      guide,
       {
           path: '/',
-          redirect: '/home'
+          redirect: '/guide'
+      }, 
+      //为了方便看， /home 看首页;  首页应该放在引导页里面，  /guide/home
+      {
+        path: '/home',
+        component: ()=>import('../pages/login/Login')
+      },
+      {
+          path: '/login',
+          component: ()=>import('../pages/login/Login')
       },
       {
           path: '/404',

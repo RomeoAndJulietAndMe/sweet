@@ -1,12 +1,15 @@
 <template>
-<div id="home" class="page">
-    <h1>首页</h1>
+    <div  class="page">
+         
+       <h1> 更多---好店页面</h1> 
+
 
 
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
-</div> 
+    </div>
+    
 </template>
 
 <script>
@@ -15,8 +18,10 @@ export default {
 }
 </script>
 
-<style lang='scss' scoped>
-#home{
+
+<style scoped lang="scss">
+#look-more{
+    
      
 }
 </style>

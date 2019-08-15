@@ -1,5 +1,8 @@
 <template>
-    <div>全部想去的用户 页面</div>
+<div>
+<h1>精选----详情页</h1>
+
+</div>
 </template>
 
 <script>

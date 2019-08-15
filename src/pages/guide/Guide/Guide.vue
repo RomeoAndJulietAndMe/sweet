@@ -1,6 +1,10 @@
 <template>
 <div>
-    <h1>附近好店页面</h1>
+    <h1>引导页</h1>
+
+    <keep-alive>
+        <router-view></router-view>
+    </keep-alive>
 </div>
 </template>
 

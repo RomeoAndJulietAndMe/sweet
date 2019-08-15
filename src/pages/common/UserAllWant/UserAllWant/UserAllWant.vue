@@ -1,13 +1,12 @@
 <template>
-<div class="page">
-<h1>探店----页面</h1>
+<div>
 
-
+<h2>全部想去的用户 页面</h2>
 
 
 <keep-alive>
-   <router-view></router-view>
-</keep-alive>    
+  <router-view></router-view>
+</keep-alive>
 </div>
 </template>
 

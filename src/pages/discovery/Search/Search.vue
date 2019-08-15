@@ -1,13 +1,11 @@
 <template>
-<div class="page">
-<h1>探店----页面</h1>
+<div>
+    <h1>搜索页面</h1>
 
-
-
-
+    
 <keep-alive>
-   <router-view></router-view>
-</keep-alive>    
+    <router-view></router-view>
+</keep-alive>
 </div>
 </template>
 

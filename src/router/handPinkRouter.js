@@ -2,25 +2,24 @@ export default {
     path: '/handpink',
     component: ()=>import('../pages/handpink/HandPink/HandPink'),
     children: [ 
-        //推荐点进去后,是  详细的故事页面
+        //趣周末/成都当地游/重庆当地游
         {
-            path:  'stories/:id', //假设会传入一个参数，具体看数据
-            component:()=>import('../pages/common/Stories/Stories'),
-            children: [  //全部想去的用户
+            path:  'niceStory/:n_id', //假设会传入一个参数，具体看数据
+            component:()=>import('../pages/handpink/NiceStory/NiceStory'),
+            children: [   
+                //某家店详情页
                 {
-                    path: 'userAllWant',
-                    component: ()=>import('../pages/common/UserAllWant')
+                    path: 'detail',
+                    component: ()=>import('../pages/handpink/StoryDetail/StoryDetail')
                 },
             ]
         },
-        //附近----更多
+        //不错的小时光
         {
-            path: 'nearby',
-        },
-        //好店
-        {
-            path: 'niceStore',
-        }
+            path: 'detail',
+            component: ()=>import('../pages/handpink/StoryDetail/StoryDetail')
+        } 
+        
        
     ]
 }

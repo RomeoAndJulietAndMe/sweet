@@ -1,5 +1,8 @@
 <template>
+<div class="page">
+
     <div>我的  页面</div>
+</div>
 </template>
 
 <script>
