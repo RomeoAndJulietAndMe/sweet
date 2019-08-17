@@ -25,7 +25,7 @@ export default {
         [Recommend.name]:Recommend
     },
     created(){
-        // this.$store.dispatch('Discovery/requestDiscoveryNavData')
+         this.$store.dispatch('discovery/requestDiscoveryNavData')
     }
 
 }

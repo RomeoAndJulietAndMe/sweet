@@ -5,7 +5,7 @@
            <h2 class="Di-bar">探店-深圳</h2>
        </div>
        <router-link class="Di-right" to="/discovery/Search">
-       <i class="left-ss" >放大镜</i>
+       <i class="left-ss" ><img src="/images/discovery/sousuo.png"></i>
        </router-link>
        </div>
 </div>
