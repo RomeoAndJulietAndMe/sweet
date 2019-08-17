@@ -5,7 +5,6 @@ export const get = (url, params = {})=>{
             params: params,
         })
         .then(response=>{
-           
             if(response.status === 200 && response.data.state === "SUCCESS"){
                 resolve(response.data);
             }else{
@@ -23,7 +22,7 @@ export const post = async (url, params = {})=>{
         let response = await axios.post(url, params);
         console.log(response)
         
-         if(response.status === 200 && response.state === 'SUCCESS'){
+         if(response.status === 200 && response.data.state === 'SUCCESS'){
             return response.data;
         }else{
             throw new Error();

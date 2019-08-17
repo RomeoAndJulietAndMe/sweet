@@ -1,8 +1,9 @@
+import {api} from './request/api'
 module.exports = {
     devServer:{
         proxy:{
             '/api':{
-                target:"http://azbk23.natappfree.cc",
+                target:api.HOST,
                 changeOrigin:true,
                 wg:true
             }
