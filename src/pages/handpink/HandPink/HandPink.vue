@@ -1,7 +1,6 @@
 <template>
 <div class="page">
-
-    <h1>精选---页面</h1>
+    <handpinkheader></handpinkheader>
 
     <keep-alive>
       <router-view></router-view>
@@ -10,8 +9,11 @@
 </template>
 
 <script>
+import handpinkheader from './children/HandPinkHeader'
 export default {
-
+  components:{
+      [handpinkheader.name]: handpinkheader
+  }
 }
 </script>
 
