@@ -2,6 +2,17 @@ export default {
     path: '/discovery',
     component: ()=>import('../pages/discovery/Discovery/Discovery'),
     children: [ 
+        {
+            path:'Search',
+            component:()=>import('../pages/discovery/Search/Search'),
+            children:[
+                {
+                    path:'SearchPage',
+                    component:()=>import('../pages/discovery/Search/SearchPage/SearchPage'),
+                },
+            ]
+        },
+    
         //推荐 —— 详细的故事页面
         {
             path:  'stories/:id', //假设会传入一个参数，具体看数据

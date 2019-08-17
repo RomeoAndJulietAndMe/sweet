@@ -11,7 +11,7 @@
    </div>
    <div v-for="item in list" :key="item.text">
        <router-link to="item.path"
-       class="list-item">
+       class="list-item border-bottom">
             <img :src="item.img" alt="">
            <span>{{item.text}}</span>
            <img src="/images/mine/mine-Right click-icons7.png" alt="">
@@ -41,44 +41,63 @@ export default {
 <style lang="scss" scoped>
 .header{
     width:100%;
-    height: 353px;
+    height: 9.413333rem;
     background:rgba(251,180,65,1);
     position:relative;
-    
-    .ding{
+    .list-item{
+        height:2.533333rem;
+        display: flex;         
+        align-items: center;
+         position:relative;        
+        span{
+            margin-left: .8rem;
+        }
+        img:nth-of-type(1){
+            margin-left:.8rem; 
+            width:1.173333rem;
+        }
         
-        margin-left: 680px;
-        margin-top: 59px;
-        width:50px;
-        height:50px;
+        img:nth-of-type(2){           
+            position: absolute;
+            right:.8rem;
+            width:.48rem;
+        }
+    }
+    .border-bottom::before{
+        border-color: #AAAAAA;
+    }
+    .ding{
+         
+        width:1.333333rem;
+        height:1.333333rem;
     }
     .h_bg{
         width:100%;
-        height: 289px;
+        height: 7.706667rem;
         position: relative;
-        margin-top: 93px; 
+        margin-top: 2.48rem;
         .edit{ 
            position: absolute;
-           top: -45px;
-            left: 290px;
+           top: -1.2rem;
+            left: 7.733333rem;
             
             text-align: center;
             .img_head{             
-                 width:166px;height: 166px;
+                 width:4.426667rem;height: 4.426667rem;
             }
             p{
-                font-size: 24px;
+                font-size: .64rem;
                 color: #333;
-                line-height: 64px;
+                line-height: 1.706667rem;
             }
             h6{
-                font-size: 20px;
+                font-size: .533333rem;
                 color: #999;
-                line-height: 44px;
+                line-height: 1.173333rem;
             }
         }
-        img{
-            height: 100%;
+        img:nth-of-type(1){
+            width:100%;
         }
     }
 }
