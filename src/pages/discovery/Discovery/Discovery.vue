@@ -24,8 +24,13 @@ export default {
         [Nearby.name]:Nearby,
         [Recommend.name]:Recommend
     },
+    methods:{
+          getdiscoverydata(){
+                 this.$store.dispatch('discovery/requestDiscoveryNavData')
+          }
+    },
     created(){
-         this.$store.dispatch('discovery/requestDiscoveryNavData')
+         this.getdiscoverydata();
     }
 
 }
