@@ -46,8 +46,7 @@ export default {
                 background:#fff;
                 i{
                     display: inline-block;
-                    font-size:0.56667rem;
-                    
+                    font-size:0.56667rem;    
                 }     
             }
         }
