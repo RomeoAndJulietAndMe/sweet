@@ -1,18 +1,28 @@
 <template>
-<div  id="mine" class="page">
+<div>
+    <div  id="mine" class="page">
+    
+
     <app-scroll class="content">
         <mine-header></mine-header> 
-
+  
     </app-scroll>
-     
+
+</div>
+
+<keep-alive>
+         <router-view></router-view>
+</keep-alive>
 </div>
 </template>
 
 <script>
 import Header from './children/Header' 
+import AppScroll from '../../../components/app-scroll' 
 export default {
     components:{
         [Header.name]:Header, 
+        [AppScroll.name]:AppScroll, 
     }
 }
 </script>
@@ -26,7 +36,7 @@ export default {
        height:100%;
        overflow: hidden;
        position: absolute;
-       
+
    }
 }
 </style>

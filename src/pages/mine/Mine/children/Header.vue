@@ -1,6 +1,8 @@
 <template>
 <div class="header">
-     <img class="ding" src="/images/mine/mine-news-icons.png" alt="">
+    <div class="ding">
+        <img src="/images/mine/mine-news-icons.png" alt="">
+    </div>
    <div class="h_bg">
        <img src="/images/mine/mine-picture.png" alt="">
        <router-link to="/mine/edit" class="edit">
@@ -12,7 +14,7 @@
    <div v-for="item in list" :key="item.text">
        <router-link to="item.path"
        class="list-item border-bottom">
-            <img :src="item.img" alt="">
+           <img :src="item.img" alt="">
            <span>{{item.text}}</span>
            <img src="/images/mine/mine-Right click-icons7.png" alt="">
        </router-link>   
@@ -41,65 +43,64 @@ export default {
 <style lang="scss" scoped>
 .header{
     width:100%;
-    height: 9.413333rem;
+    height: 4.186667rem;
     background:rgba(251,180,65,1);
     position:relative;
-    .list-item{
-        height:2.533333rem;
+      .list-item{
+        height:1.333333rem;
         display: flex;         
         align-items: center;
-         position:relative;        
+        position:relative;        
         span{
-            margin-left: .8rem;
+            margin-left: .266667rem;
+            color: #333;
+            font-size: .32rem;
+
         }
         img:nth-of-type(1){
-            margin-left:.8rem; 
-            width:1.173333rem;
+            margin-left:.4rem; 
+            
         }
         
         img:nth-of-type(2){           
             position: absolute;
-            right:.8rem;
-            width:.48rem;
+            right: .4rem;
         }
     }
     .border-bottom::before{
         border-color: #AAAAAA;
     }
     .ding{
-         
-        width:1.333333rem;
-        height:1.333333rem;
-    }
-    .h_bg{
-        width:100%;
-        height: 7.706667rem;
-        position: relative;
-        margin-top: 2.48rem;
-        .edit{ 
-           position: absolute;
-           top: -1.2rem;
-            left: 7.733333rem;
-            
-            text-align: center;
-            .img_head{             
-                 width:4.426667rem;height: 4.426667rem;
-            }
-            p{
-                font-size: .64rem;
-                color: #333;
-                line-height: 1.706667rem;
-            }
-            h6{
-                font-size: .533333rem;
-                color: #999;
-                line-height: 1.173333rem;
-            }
-        }
-        img:nth-of-type(1){
+        width:.666667rem;
+        height:.666667rem;
+        margin-left: 9.066667rem;
+        padding-top:  .266667rem;
+        box-sizing: border-box;
+        img{
             width:100%;
         }
     }
+    .h_bg{
+        width:100%; 
+        position: relative;  
+        margin-top: 1.44rem;
+        .edit{ 
+           position: absolute;
+           top: -45px;
+            left: 290px; 
+            text-align: center;        p{
+                font-size: 24px;
+                color: #333;
+                line-height: 64px;
+            }
+            h6{
+                font-size: 20px;
+                color: #999;
+                line-height: 44px;
+            }
+        }
+       
+    } 
 }
 </style>
  
