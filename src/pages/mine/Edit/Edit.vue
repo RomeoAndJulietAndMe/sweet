@@ -42,7 +42,7 @@ export default {
     background: #fff;
 //    background:rgba(251,180,65,1);
     position:absolute;
-    bottom: 0px;
+   
     top:0;
     left:0;
     z-index: 2; 

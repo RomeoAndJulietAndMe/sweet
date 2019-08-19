@@ -3,12 +3,17 @@ import {get,post} from '../../request/index'
 
 export default {
     namespaced: true,
-    state:{
-        myMessage :[],
+    state:{        
+        myMessage :[],//我的消息
+        collection:[],//我的收藏
+        pass:[],//pass卡
     },
     mutations: {
         setMyMessageData(state,value){
             state.myMessage.push(value);
+        },
+        setPassData(state,value){
+            state.pass.push(value);
         }
     },
     actions:{
@@ -19,6 +24,12 @@ export default {
             let newData = data.data;
             // console.log(newData);
             context.commit('setMyMessageData',newData);
+        },
+        //PASS卡
+        async requestPassData(context){
+            let data = await get(api.PASS_URL);
+            console.log(data);
+            context.commit('setPassData',data);
         }
     }
 }

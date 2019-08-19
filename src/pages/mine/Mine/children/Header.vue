@@ -34,12 +34,12 @@ export default {
     data(){
         return {
             list:[
-                {text:'美好生活PASS卡',path:'/mine/myMessage',img:'/images/mine/mine-icon.png'},
+                {text:'美好生活PASS卡',path:'/mine/pass',img:'/images/mine/mine-icon.png'},
                 {text:'发布小店',path:'/mine/myMessage',img:'/images/mine/mine-icons1.png'},
                 {text:'我的订单',path:'/mine/order',img:'/images/mine/mine-icons2.png'},
-                {text:'收藏',path:'/mine/myMessage',img:'/images/mine/mine-icons3.png'},
+                {text:'收藏',path:'/mine/collect',img:'/images/mine/mine-icons3.png'},
                 {text:'意见反馈',path:'/mine/myMessage',img:'/images/mine/mine-icons5.png'},
-                {text:'设置',path:'/mine/myMessage',img:'/images/mine/mine-icons6.png'},
+                {text:'设置',path:'/mine/edit',img:'/images/mine/mine-icons6.png'},
             ]
         }
     }
