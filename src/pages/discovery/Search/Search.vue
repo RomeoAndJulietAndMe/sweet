@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 #search{
-    background:#666;
+    background:#999999;
     width:100%;
     position: absolute;
     bottom:0;

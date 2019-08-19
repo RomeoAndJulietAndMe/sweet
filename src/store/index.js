@@ -7,6 +7,8 @@ import  mine from './modules/mine'
 import  discovery from './modules/discovery'
 import  handpink from './modules/handpink'
 
+import  login from './mode/login'
+
 export default new Vuex.Store({
   state: {
 
@@ -21,6 +23,7 @@ export default new Vuex.Store({
     home,
     mine,
     discovery,
-    handpink
+    handpink,
+    login
   }
 })
