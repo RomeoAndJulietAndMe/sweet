@@ -15,13 +15,16 @@
         </router-link> 
    </div>
    <div v-for="item in list" :key="item.text">
-       <router-link to="item.path"
+       <router-link :to=item.path
        class="list-item border-bottom">
            <img :src="item.img" alt="">
            <span>{{item.text}}</span>
            <img src="/images/mine/mine-Right click-icons7.png" alt="">
        </router-link>   
    </div>
+ <!--   <keep-alive>
+       <router-view></router-view>
+   </keep-alive> -->
 </div>
 </template>
 
@@ -31,11 +34,11 @@ export default {
     data(){
         return {
             list:[
-                {text:'美好生活PASS卡',path:'/mine',img:'/images/mine/mine-icon.png'},
-                {text:'发布小店',path:'/mine',img:'/images/mine/mine-icons1.png'},
-                {text:'我的订单',path:'/mine',img:'/images/mine/mine-icons2.png'},
-                {text:'收藏',path:'/mine',img:'/images/mine/mine-icons3.png'},
-                {text:'意见反馈',path:'/mine',img:'/images/mine/mine-icons5.png'},
+                {text:'美好生活PASS卡',path:'/mine/myMessage',img:'/images/mine/mine-icon.png'},
+                {text:'发布小店',path:'/mine/myMessage',img:'/images/mine/mine-icons1.png'},
+                {text:'我的订单',path:'/mine/order',img:'/images/mine/mine-icons2.png'},
+                {text:'收藏',path:'/mine/myMessage',img:'/images/mine/mine-icons3.png'},
+                {text:'意见反馈',path:'/mine/myMessage',img:'/images/mine/mine-icons5.png'},
                 {text:'设置',path:'/mine/myMessage',img:'/images/mine/mine-icons6.png'},
             ]
         }
