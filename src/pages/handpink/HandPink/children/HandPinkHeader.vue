@@ -1,11 +1,11 @@
 <template>
-  <div class="header-box">
+
       <div class="handpink-header">
-          <div class="title-box">
+          
               <h2>精选</h2>
-          </div>
+          
       </div>
-  </div>
+
 </template>
 
 <script>
@@ -15,20 +15,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header-box{
+ .handpink-header{
     width: 100%;
-    
-    .handpink-header{
-        height: 127px;
-        background: #FBB441;
-        .title-box{
-            line-height: 127px;
-            text-align: center;
-            font-family: PingFang-SC-Bold;
-            color: #fff;
-            font-size: 24px;
-            margin-top: 27px;
-        }
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 27px;
+    height: 100px;
+    background: #FBB441;
+    h2{
+        text-align: center;
+        font-family: PingFang-SC-Bold;
+        color: #fff;
+        font-size: 40px;
+        margin-top: 27px;
     }
 }
+
 </style>

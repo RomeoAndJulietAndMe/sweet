@@ -1,39 +1,13 @@
 <template>
 <div class="page">
-   <app-scroll>
-    <handpinkheader></handpinkheader>
+   <handpinkheader></handpinkheader>
+
+   <app-scroll class="content">
+   
     <hand-week></hand-week>
     <hand-local></hand-local>
     <hand-hill></hand-hill>
-
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-<h1>dfjs</h1>
-
-
-
+    <hand-miss></hand-miss>
    </app-scroll>
 
 
@@ -44,6 +18,7 @@
 </template>
 
 <script>
+import handmiss from './children/HandMiss'
 import appsrcoll from '../../../components/app-scroll'
 import handhill from './Children/HandHill'
 import handlocal from './Children/HandLocal'
@@ -51,18 +26,25 @@ import handweek from './Children/Handweek'
 import handpinkheader from './Children/HandPinkHeader'
 export default {
   components:{
+      // [appsrcoll.name]:appsrcoll,
       [handpinkheader.name]: handpinkheader,
       [handweek.name]:handweek,
       [handlocal.name]:handlocal,
-      [handhill.name]:handhill
+      [handhill.name]:handhill,
+      [handmiss.name]:handmiss
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .page{
-  width: 100%;
-  background: #fff;
+  .content{
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+  }
+
+
 }
 
 </style>
