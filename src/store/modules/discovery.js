@@ -1,15 +1,17 @@
-import {get,post} from '../../request/index'
+import {get} from '../../request/index'
+import api from '../../request/api'
 export default {
     namespaced: true,
     state:{
          navData:[]
     },
     mutations: {
-
+          
     },
     actions:{
-       async requestDiscoveryNavData(){
-            let data = await post(api.DISCOVERY_NAV_URL);
+       async requestDiscoveryNavData(context){
+           console.log('requestDiscoveryNavData...')
+            let data = await get(api.DISCOVERY_NAV_URL);
             console.log(data);
         }
     }

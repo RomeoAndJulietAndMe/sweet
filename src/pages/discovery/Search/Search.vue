@@ -1,20 +1,28 @@
 <template>
     <div class="page" id="search">
-       
-            <router-link to="/discovery/Search/SearchPage">
-            这是搜索选项
-            </router-link>
+
+        <searchhd></searchhd>
+        <Searchpage></Searchpage>
+
+
         <router-view></router-view>
     </div>
 </template>
 
 <script>
+import Searchhd from '../Search/Searchhd'
+import Searchpage from '../Search/SearchPage/SearchPage'
+import {mapState} from 'vuex'
 export default {
-
+    components:{
+        [Searchhd.name]:Searchhd,
+        [Searchpage.name]:Searchpage,
+    },
+    
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 #search{
     background:#666;
     width:100%;

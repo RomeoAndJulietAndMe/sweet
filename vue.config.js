@@ -1,11 +1,12 @@
+import {api} from './request/api'
 module.exports = {
-    publicPath: './',//默认值为： /
-    devServer: {
-      proxy: {
-          '/api': {
-              target: "http://863t9n.natappfree.cc",
-              changeOrigin: true
-          }
-      }
+    devServer:{
+        proxy:{
+            '/api':{
+                target:api.HOST,
+                changeOrigin:true,
+                wg:true
+            }
+        }
     }
 }
