@@ -31,5 +31,6 @@ export default {
 <style>
 .scroll-wrap{
     overflow: hidden;
+    width: 100%;
 }
 </style>
