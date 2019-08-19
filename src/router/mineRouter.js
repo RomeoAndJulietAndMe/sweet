@@ -15,6 +15,11 @@ export default {
         {
             path:'myMessage',
             component:()=>import('../pages/mine/MyMessage/MyMessage')
+        },
+        {
+            //我的订单
+            path:'order',
+            component:()=>import ('../pages/mine/Order/Order')
         }
     ]
 }
