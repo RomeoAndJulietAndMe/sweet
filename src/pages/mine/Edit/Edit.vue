@@ -13,7 +13,7 @@
             
       </ul>
 
-    <message></message>
+    <message ></message>
  
      <keep-alive>
          <router-view></router-view>
@@ -26,11 +26,14 @@
 <script>
 import AppHeader from '../../../components/app-header'
 import Message from './children/Message'
+import {mapState} from '../../../store/mode/login'
 export default {
     components:{
         [AppHeader.name]:AppHeader,
         [Message.name]:Message,
-    }
+    },
+    
+
 }
 </script>
 

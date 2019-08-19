@@ -25,7 +25,8 @@ export default {
          
     },
     mounted(){
-        console.log(this.$route);
+        // console.log(this.$route);
+        // console.log(this.$router);
     },
     methods: {
         backAction(){
@@ -46,7 +47,7 @@ export default {
     h1{ 
         width: 100%;
         text-align: center;  
-     
+       font-size: .453333rem;
     }
     span:nth-of-type(1){ 
         position: absolute;

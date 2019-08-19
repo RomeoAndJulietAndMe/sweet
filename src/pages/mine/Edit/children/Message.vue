@@ -2,7 +2,7 @@
 <div class="message">
 <h6>基本信息</h6>
     <ul class="items">
-        <li v-for="(item,index) in messages" :key="index" class="item border-bottom">
+        <li v-for="(item,index) in userInfoData" :key="index" class="item border-bottom">
             <span>{{item.context}}</span>
            <i >{{item.values}}</i>
         </li>
@@ -23,21 +23,21 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
     name:'message',
     data(){
-       return {
-           messages:[
-            {context:'用户名',values:'【随风漂流】'},
-            {context:'签名',values:'添加个性签名'},
-            {context:'邮箱',values:'添加邮箱'},
-            {context:'手机号',values:'绑定手机号'},
-          ],
+       return { 
           more:[
             {context:'关于我们',path:'/'},              
             {context:'清除缓存',path:'/',others:"113.80MB"},             
           ]
        } 
+    },
+    computed:{
+        ...mapState({
+            userInfoData:state=>state.login.userInfoData,
+        })
     },
     methods:{
         editAction(value){

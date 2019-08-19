@@ -5,7 +5,10 @@ module.exports = {
             '/api':{
                 target:"http://azbk23.natappfree.cc",
                 changeOrigin:true,
-                wg:true
+            },
+            '/myapi':{
+                target:'http://localhost:9000',
+                changeOrigin:true,
             }
         }
     }
