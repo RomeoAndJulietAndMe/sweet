@@ -5,10 +5,11 @@ export const get = (url, params = {})=>{
             params: params,
         })
         .then(response=>{
+            // console.log(response);
             if(response.status === 200 && response.data.state === "SUCCESS"){
                 resolve(response.data);
             }else{
-                console.log('请求失败');
+                console.log('请求失败.');
             }
         })
         .catch(error=>{
@@ -20,7 +21,7 @@ export const get = (url, params = {})=>{
 export const post = async (url, params = {})=>{
     try {
         let response = await axios.post(url, params);
-        console.log(response)
+        // console.log(response)
         
          if(response.status === 200 && response.data.state === 'SUCCESS'){
             return response.data;

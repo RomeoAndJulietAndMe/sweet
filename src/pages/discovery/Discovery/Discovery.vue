@@ -1,5 +1,4 @@
 <template>
-
 <div class="discovery">
    <discovery-head></discovery-head>
    <div class="haodian">
