@@ -13,7 +13,7 @@ export default {
             state.myMessage.push(value);
         },
         setPassData(state,value){
-            state.pass.push(value);
+            state.pass=value;
         }
     },
     actions:{
@@ -28,8 +28,9 @@ export default {
         //PASS卡
         async requestPassData(context){
             let data = await get(api.PASS_URL);
-            console.log(data);
-            context.commit('setPassData',data);
+            let newData = data.data;
+            console.log(newData);
+            context.commit('setPassData',newData);
         }
     }
 }

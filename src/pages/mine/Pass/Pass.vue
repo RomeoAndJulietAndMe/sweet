@@ -8,17 +8,19 @@
 </div>
 
     <div v-for="item in passData" :key="item.id"
-    class="items">
-        <div>
-            <img :src="item.url" alt="">
-        </div>
-        <div>
-            <h1>{{item.text1}}</h1>
-            <h2>{{item.text2}}</h2>
-            <h3>{{item.text3}}</h3>
-            <div>
-                <img :src="item.url2" alt="">
-                <span>{{item.text4}}</span>
+     >
+        <div class="item">
+            <div class="item-img">
+                <img :src="item.url" alt="">
+            </div>
+            <div class="item-text">
+                <h1>{{item.text1}}</h1>
+                <h2>{{item.text2}}</h2>
+                <h3>{{item.text3}}</h3>
+                <div class="item-text-img">
+                    <img :src="item.url2" alt="">
+                    <span>{{item.text4}}</span>
+                </div>
             </div>
         </div>
     </div>
@@ -45,9 +47,9 @@ export default {
             passData:state=>state.mine.pass,
         })
     },
-    created(){
-        console.log(this.$store.dispatch);
+    created(){ 
         this.$store.dispatch('mine/requestPassData');
+        
     }
 }
 </script>
@@ -59,6 +61,55 @@ export default {
         left: 0;top:0;right: 0;      
         z-index: 2;
         padding-bottom: 1.066667rem;
+    .item{
+      display: flex;
+      justify-content: flex-start;
+       align-items: center;
+        padding-left: .4rem;
+        padding-right: .4rem;
+        margin-top: .426667rem;
+        width:100%;
+        height:2.986667rem;
+        box-sizing: border-box;
+        .item-img{
+            
+            width:3.546667rem;
+            height:100%;
+            margin-right: .266667rem;
+            img{
+                width:100%;
+            }
+        }
+        .item-text{ 
+            width:5.653333rem;         
+             
+           
+            h1{
+                font-size: .32rem;
+                color:#666;
+                margin-bottom: .293333rem;
+            }
+            h2,h3,.item-text-img span{
+                font-size: .266667rem;
+                color:#999;
+                
+            }
+             h2,h3,.item-text-img{
+                 margin-bottom: .266667rem;
+             }
+            .item-text-img{
+                 display: flex;
+                 align-items: center;
+                span{
+                    margin-left: .133333rem;
+                }
+                img{
+                    width:.32rem;
+                }
+            }
+        }
+    }
+    
     .vip{
         background:rgba(251,180,65,1);
         height: 1.066667rem;
@@ -74,7 +125,7 @@ export default {
      .edit-head{
         background:rgba(251,180,65,1);
         position: relative;
-        z-index: 6;
+        z-index: 7;
         color:#fff;        
     }
 }

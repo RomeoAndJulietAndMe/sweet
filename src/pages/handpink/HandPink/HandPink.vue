@@ -45,10 +45,10 @@
 
 <script>
 import appsrcoll from '../../../components/app-scroll'
-import handhill from './children/HandHill'
-import handlocal from './children/HandLocal'
-import handweek from './children/Handweek'
-import handpinkheader from './children/HandPinkHeader'
+import handhill from './Children/HandHill'
+import handlocal from './Children/HandLocal'
+import handweek from './Children/Handweek'
+import handpinkheader from './Children/HandPinkHeader'
 export default {
   components:{
       [handpinkheader.name]: handpinkheader,
