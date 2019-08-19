@@ -17,11 +17,12 @@ export default {
 <style lang="scss" scoped>
 .header-box{
     width: 100%;
+    
     .handpink-header{
-        height: 44px;
+        height: 127px;
         background: #FBB441;
         .title-box{
-            line-height: 44px;
+            line-height: 127px;
             text-align: center;
             font-family: PingFang-SC-Bold;
             color: #fff;
