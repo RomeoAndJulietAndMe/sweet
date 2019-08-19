@@ -1,10 +1,10 @@
-const HOST = 'http://azbk23.natappfree.cc'
+// const HOST = 'http://azbk23.natappfree.cc'
 
 const DISCOVERY_NAV_URL = '/api/shopController/queryShop'
 
 
 
 export default{
-    HOST,
+    // HOST,
     DISCOVERY_NAV_URL
 }
