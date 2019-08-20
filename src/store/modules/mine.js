@@ -3,15 +3,23 @@ import {get,post} from '../../request/index'
 
 export default {
     namespaced: true,
-    state:{
-        myMessage :[],
+    state:{        
+        myMessage :[],//我的消息
+        collection:[],//我的收藏
+        pass:[],//pass卡
+        substore:[],//发布小店
     },
     mutations: {
         setMyMessageData(state,value){
             state.myMessage.push(value);
+        },
+        setPassData(state,value){
+            state.pass=value;
         }
     },
     actions:{
+        //发布小店
+        
         //我的消息
         async requestMyMessageData(context){
             let data = await get(api.MYMESSAGE_URL);
@@ -19,6 +27,13 @@ export default {
             let newData = data.data;
             // console.log(newData);
             context.commit('setMyMessageData',newData);
+        },
+        //PASS卡
+        async requestPassData(context){
+            let data = await get(api.PASS_URL);
+            let newData = data.data;
+            console.log(newData);
+            context.commit('setPassData',newData);
         }
     }
 }

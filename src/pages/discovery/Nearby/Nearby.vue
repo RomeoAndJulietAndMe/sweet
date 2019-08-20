@@ -4,10 +4,7 @@
      <div class="tuijian-bar" ref="menuScroll">
          <ul class="menu-list">
              <li class="menu-item" v-for="item in tuijianData" :key="item.id">
-                 <img :src="item.img" >
-                 <h4 class="p4">{{item.name}}</h4>
-                 <h4 class="p5">{{item.listPicUrl}}</h4>
-                 <i class="p6">{{item.productPlace}}</i>
+                 <img :src="item.img">
              </li>
          </ul>
      </div>
@@ -21,12 +18,9 @@ export default {
     data(){
         return{
            tuijianData:[
-               {id:1,img:'tupian',name:'倾听纸张的故事',listPicUrl:'敬人敬语',productPlace:'666人想去'},
-                {id:2,img:'tupian',name:'倾听纸张的故事',listPicUrl:'敬人敬语',productPlace:'666人想去'},
-                 {id:3,img:'tupian',name:'倾听纸张的故事',listPicUrl:'敬人敬语',productPlace:'666人想去'},
-                  {id:4,img:'tupian',name:'倾听纸张的故事',listPicUrl:'敬人敬语',productPlace:'666人想去'},
-                   {id:5,img:'tupian',name:'倾听纸张的故事',listPicUrl:'敬人敬语',productPlace:'666人想去'},
-                    {id:6,img:'tupian',name:'倾听纸张的故事',listPicUrl:'敬人敬语',productPlace:'666人想去'}
+               {id:1,img:'/images/discovery/banner02.png'},
+                {id:2,img:'/images/discovery/banner04.png'},
+                 {id:3,img:'/images/discovery/banner05.png'},    
            ] 
         }
     },
@@ -60,13 +54,8 @@ export default {
         .menu-list{  
             display: flex;
             width:200%;
-            .menu-item{
-                flex:1;
-                background:#fff;
+             .menu-item{
                 margin-right:.266667rem;
-                border:.026667rem solid #fff;
-                border-radius: 0 .266667rem .266667rem .266667rem
-            
             }
         }
     }
