@@ -10,8 +10,8 @@ export default {
     
         //推荐 —— 详细的故事页面
         {
-            path:  'stories/:id', //假设会传入一个参数，具体看数据
-            component:()=>import('../pages/common/Stories/Stories'),
+            path:  'more', //假设会传入一个参数，具体看数据
+            component:()=>import('../pages/discovery/NiceStory/more/more'),
             children: [  //全部想去的用户
                 {
                     path: 'userAllWant',

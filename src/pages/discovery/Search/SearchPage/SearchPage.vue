@@ -47,7 +47,6 @@ export default {
               .navlist-item{
                    margin-right:1.066667rem;
                    margin-bottom:.266667rem;
-
                    list-style: none;
                    height:.666667rem;
                    border:.026667rem solid #fff;
