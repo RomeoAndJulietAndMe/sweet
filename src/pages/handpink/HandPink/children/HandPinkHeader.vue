@@ -17,7 +17,7 @@ export default {
 <style lang="scss" scoped>
  .handpink-header{
     width: 100%;
-    position: absolute;
+    // position: absolute;
     top: 0;
     left: 0;
     margin-top: 27px;
