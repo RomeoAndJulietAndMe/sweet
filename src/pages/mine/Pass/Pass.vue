@@ -7,7 +7,7 @@
     <img src="/images/mine/mine-pass-banner1.png" alt="">
 </div>
 
-    <div v-for="item in passData" :key="item.id"
+    <div class="items" v-for="item in passData" :key="item.id"
      >
         <div class="item">
             <div class="item-img">
@@ -56,21 +56,25 @@ export default {
 
 <style lang="scss" scoped>
 .pass{
-       position: absolute;
-        background: #fff;
-        left: 0;top:0;right: 0;      
-        z-index: 2;
-        padding-bottom: 1.066667rem;
-    .item{
+    position: absolute;
+    background: #fff;
+    left: 0;top:0;right: 0;      
+    z-index: 2;
+    padding-bottom: 1.066667rem;
+    .items{
+         padding-left: .4rem;
+        padding-right: .4rem;
+      .item{
       display: flex;
       justify-content: flex-start;
-       align-items: center;
-        padding-left: .4rem;
-        padding-right: .4rem;
+       align-items: center;       
         margin-top: .426667rem;
         width:100%;
         height:2.986667rem;
-        box-sizing: border-box;
+        
+            
+        box-shadow:0px .053333rem .16rem 0px rgba(145,143,143,0.38);
+        border-radius:.266667rem;
         .item-img{
             
             width:3.546667rem;
@@ -78,6 +82,7 @@ export default {
             margin-right: .266667rem;
             img{
                 width:100%;
+                height:100%;
             }
         }
         .item-text{ 
@@ -109,6 +114,8 @@ export default {
             }
         }
     }
+    }
+    
     
     .vip{
         background:rgba(251,180,65,1);

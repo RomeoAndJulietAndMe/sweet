@@ -7,6 +7,7 @@ export default {
         myMessage :[],//我的消息
         collection:[],//我的收藏
         pass:[],//pass卡
+        substore:[],//发布小店
     },
     mutations: {
         setMyMessageData(state,value){
@@ -17,6 +18,8 @@ export default {
         }
     },
     actions:{
+        //发布小店
+        
         //我的消息
         async requestMyMessageData(context){
             let data = await get(api.MYMESSAGE_URL);

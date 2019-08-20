@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import handmiss from './children/HandMiss'
+import handmiss from './Children/HandMiss'
 import appsrcoll from '../../../components/app-scroll'
 import handhill from './Children/HandHill'
 import handlocal from './Children/HandLocal'
@@ -26,7 +26,7 @@ import handweek from './Children/Handweek'
 import handpinkheader from './Children/HandPinkHeader'
 export default {
   components:{
-      // [appsrcoll.name]:appsrcoll,
+      [appsrcoll.name]:appsrcoll,
       [handpinkheader.name]: handpinkheader,
       [handweek.name]:handweek,
       [handlocal.name]:handlocal,

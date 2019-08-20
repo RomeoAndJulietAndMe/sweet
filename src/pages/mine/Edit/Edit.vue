@@ -45,6 +45,7 @@ export default {
    
     top:0;
     left:0;
+    bottom: 0;
     z-index: 2; 
     .edit-head{
         background:rgba(251,180,65,1);
