@@ -4,12 +4,12 @@
       <div class="more-list" >
             <div class="more-zujian">
                 <div class="more-shangcen">
-                <h4>七彩云南，半夏味道</h4>
-                <span>50人想去</span>
+                <h4>{{title.name}}</h4>
+                <span>{{title.wanttogo}}</span>
                 </div>
-                <div id="dingwei">宝安区 · [半夏云南味道]</div>
+                <div id="dingwei">{{title.location}}</div>
                 <div class="santu">
-                    <li v-for="item in listData" :key="item.id">
+                    <li v-for="item in title.tupiann" :key="item.id">
                         <img :src="item.img">
                     </li>
                 </div>
@@ -37,13 +37,9 @@
 <script>
 export default {
     name:'more-home',
+    props:{title:Object},
      data(){
          return{
-             listData:[
-                        {id:1,img:'/images/discovery/gengduo.png'},
-                        {id:2,img:'/images/discovery/gengduo.png'},
-                        {id:3,img:'/images/discovery/gengduo.png'},
-                      ],
               iSshow:false,
              
          }
@@ -51,7 +47,9 @@ export default {
      methods:{
          blockAciton(){
              this.iSshow = !this.iSshow
+           
          }
+         
      }
 }
 </script>
@@ -59,10 +57,8 @@ export default {
 <style lang="scss" scoped>
 #more-home{
         width:100%;
-        position: absolute;
-        top: 1.173333rem;
-        left: 0;
         background:#FBB441;
+        margin-top:1.173333rem;
         .baoguo{
         .more-list{
             padding:0 .4rem;

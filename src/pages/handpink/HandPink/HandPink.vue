@@ -8,12 +8,16 @@
     <hand-local></hand-local>
     <hand-hill></hand-hill>
     <hand-miss></hand-miss>
-   </app-scroll>
+
+ 
+
+  </app-scroll>
 
 
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
+    
 </div>
 </template>
 
@@ -38,9 +42,11 @@ export default {
 
 <style lang="scss" scoped>
 .page{
+  padding-bottom: 120px;
   .content{
     overflow: hidden;
     width: 100%;
+    height: 100%;
     background: #fff;
   }
 

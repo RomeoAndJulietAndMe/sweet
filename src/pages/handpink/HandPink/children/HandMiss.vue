@@ -1,6 +1,6 @@
 <template>
   <div class="unmiss">
-      <p class="unmiss-title">不可错过的小时光</p>
+      <div class="unmiss-title">不可错过的小时光</div>
       <div class="unmiss-box" ref="menuScroll">
           <ul class="unmiss-list">
               <li class="list-item" v-for="item in missData" :key="item.id">
@@ -9,7 +9,6 @@
               </li>
           </ul>
       </div>
-
   </div>
 </template>
 
@@ -40,25 +39,33 @@ export default {
 <style lang="scss" scpoed>
 .unmiss{
     width: 100%;
-    position: absolute;
-    left:10px;
-    top:993px;
+    // position: absolute;
+    margin-left:10px;
+     
     box-sizing:border-box;
-    display: flex;
+    // display: flex;
     .unmiss-title{
         font-size: 30px;
         margin-left:39px;
         margin-top:80px;
+        color: #333;
+        font-family: PingFang-SC-Medium;
+        width:259px;
+        height: 28px;
+    
     }
     .unmiss-box{
         box-sizing:border-box; 
         overflow: hidden;
+        // position: absolute;
+            left:30px;
+            top:500px;
         .unmiss-list{
             display: flex;
+            width: 150%;
             .list-item{
-                flex:1;
-                background:#fff;
-
+                flex: 1;
+                padding-top:20px;
             }
         }
     }
