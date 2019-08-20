@@ -1,10 +1,12 @@
 <template>
    <div class="box">
+     <router-link to="/discovery/more">
         <div class="week">
         <h3 class="title">重庆当地游</h3>
         <p class="week-content">成都，是一座旅游城市，它的景点比赞美它的诗还多，有space club,有play house...</p>
         <img src="/images/handpink/heytea.jpg" alt="">
-    </div>
+        </div>
+    </router-link>
    </div>
 </template>
 

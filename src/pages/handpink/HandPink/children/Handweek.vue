@@ -21,7 +21,7 @@ export default {
     width: 710px;
     height: 266px;
     background: #FBB441;
-    // position: absolute;
+    position: relative;
     margin-left: 20px;
     
     margin-top: 49px;
@@ -45,9 +45,9 @@ export default {
     img{
         width: 180px;
         height: 180px;
-        position:absolute;
-        left:472px;
-        top:35px;
+        position: absolute;
+        right: 80px;
+        top: 40px;
     }
 }
 
