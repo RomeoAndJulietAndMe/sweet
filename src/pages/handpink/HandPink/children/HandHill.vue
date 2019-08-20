@@ -19,9 +19,9 @@ export default {
     width: 710px;
     height: 266px;
     background: #FFC4BF;
-    position: absolute;
-    left: 20px;
-    top: 688px;
+    position: relative;
+    margin-left: 20px;
+     
     margin-top: 70px;
     border-radius: 20px;
     .title{
@@ -44,8 +44,8 @@ export default {
         width: 180px;
         height: 180px;
         position:absolute;
-        left:472px;
-        top:35px;
+        right: 80px;
+         top: 40px;
     }
 }
 

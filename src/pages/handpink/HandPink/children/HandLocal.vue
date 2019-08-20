@@ -1,6 +1,6 @@
 <template>
    <div class="box">
-        <div class="week">
+    <div class="week">
         <h3 class="title">成都当地游</h3>
         <p class="week-content">成都，是一座旅游城市，它的景点比赞美它的诗还多，有space club,有play house...</p>
         <img src="/images/handpink/heytea.jpg" alt="">
@@ -19,9 +19,9 @@ export default {
     width: 710px;
     height: 266px;
     background: #64D9F3;
-    position: absolute;
-    left: 20px;
-    top: 422px;
+    position: relative;
+    margin-left: 20px;
+    
     margin-top: 50px;
     border-radius: 20px;
     .title{
@@ -43,9 +43,9 @@ export default {
     img{
         width: 180px;
         height: 180px;
-        position:absolute;
-        left:472px;
-        top:35px;
+         position: absolute;
+         right: 80px;
+         top: 40px;
     }
 }
 

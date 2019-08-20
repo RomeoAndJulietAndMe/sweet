@@ -8,12 +8,16 @@
     <hand-local></hand-local>
     <hand-hill></hand-hill>
     <hand-miss></hand-miss>
-   </app-scroll>
+
+ 
+
+  </app-scroll>
 
 
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
+    
 </div>
 </template>
 
@@ -26,7 +30,7 @@ import handweek from './children/Handweek'
 import handpinkheader from './children/HandPinkHeader'
 export default {
   components:{
-      // [appsrcoll.name]:appsrcoll,
+      [appsrcoll.name]:appsrcoll,
       [handpinkheader.name]: handpinkheader,
       [handweek.name]:handweek,
       [handlocal.name]:handlocal,
@@ -38,9 +42,11 @@ export default {
 
 <style lang="scss" scoped>
 .page{
+  padding-bottom: 120px;
   .content{
     overflow: hidden;
     width: 100%;
+    height: 100%;
     background: #fff;
   }
 
