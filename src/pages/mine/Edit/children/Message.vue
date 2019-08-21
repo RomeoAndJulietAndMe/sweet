@@ -51,7 +51,7 @@ export default {
             let sign= this.$refs.message[1].value;
             let mail= this.$refs.message[2].value;
             let phoneNumber= this.$refs.message[3].value;
-            let id = userId;
+            let id = this.userId;
             this.$store.commit('login/requestSaveMessage',{userName,sign,mail,phoneNumber,id});
         },
         editAction(value){
