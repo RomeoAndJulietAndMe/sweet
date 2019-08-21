@@ -4,7 +4,7 @@ module.exports = {
     devServer:{
         proxy:{
             '/api':{
-                target:"http://fmvew9.natappfree.cc",
+                target:"http://69zuza.natappfree.cc",
                 changeOrigin:true,
             },
             '/myapi':{
