@@ -23,10 +23,8 @@
       <div class="zhuanfa">
           <i class="iconfont icon-icon-arrow-top2" @click="blockAciton"></i>
           <ul class="xianshiyc">
-              <li class="iconfont icon-hongxin"></li>
-               <li class="iconfont icon-star"></li>
-                <li class="iconfont icon-zhuanfa"></li>
-                 <li class="iconfont icon-pinglun"></li>
+              <li v-for="(item,index) in iconData" :key="item.id" :class="[item.icon,{to:item.dianjiData}]" @click="collectAction(item.id,index)" class="tab-item"></li>
+              
           </ul>
       </div>
       </div>
@@ -41,13 +39,23 @@ export default {
      data(){
          return{
               iSshow:false,
-             
+              iconData:[
+                  {id:1,icon:'iconfont icon-hongxin',dianjiData:false,},
+                  {id:2,icon:'iconfont icon-star',dianjiData:false,},
+                  {id:3,icon:'iconfont icon-zhuanfa',dianjiData:false,},
+                  {id:4,icon:'iconfont icon-pinglun',dianjiData:false,},
+                ],
+                
+
          }
      },
      methods:{
          blockAciton(){
-             this.iSshow = !this.iSshow
-           
+             this.iSshow = !this.iSshow   
+         },
+         collectAction(id,index){
+             this.iconData[index].dianjiData = !this.iconData[index].dianjiData
+            console.log(index)
          }
          
      }
@@ -58,7 +66,8 @@ export default {
 #more-home{
         width:100%;
         background:#FBB441;
-        margin-top:1.173333rem;
+        padding-bottom:1.066667rem;
+        
         .baoguo{
         .more-list{
             padding:0 .4rem;
@@ -129,6 +138,10 @@ export default {
                             }
                         }
         }
+         .tab-item.to{
+           color:lightsalmon;
+         
+    }
         }
     }
          

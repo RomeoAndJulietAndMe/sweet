@@ -42,6 +42,7 @@ export default {
      width:100%;
      padding:0 .266667rem;
      box-sizing:border-box;
+    
      .nearbyH3{
          height:1.333333rem;
          line-height: 1.333333rem;

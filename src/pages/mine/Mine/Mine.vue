@@ -23,11 +23,21 @@
 <script>
 import Header from './children/Header' 
 import AppScroll from '../../../components/app-scroll' 
+import {mapState} from 'vuex'
 export default {
     components:{
         [Header.name]:Header, 
         [AppScroll.name]:AppScroll, 
-    }
+    },
+    // computed:{
+    //     ...mapState({
+    //         MoreData:state=>state.discovery.MoreData,
+    //     })
+    // },
+    // updated(){
+    //     console.log(this.MoreData);
+    // }
+
 }
 </script>
 
