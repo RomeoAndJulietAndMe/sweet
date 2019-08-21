@@ -5,14 +5,18 @@
 
             <div class="input-wrap">
                 <label>手机号：</label>
-                <input type="text" v-model="phoneNum" class="phone-num" placeholder="请输入手机号码">
+                <input type="text" class="input phone" placeholder="请输入手机号码"
+                :value="phone"
+                ref="phone" v-on:change="changePhone" v-on:input="changePhone">
             </div>
             <div class="input-code-wrap">
                 <label>验证码：</label>
-                <input type="text" class="verify-num" v-model="verifyNum" placeholder="请输入验证码">
-                <input type="button" class="get-code" v-on:click="sendSmsCode" v-bind="{'disabled':disabled}" v-model="btnContent"/>
+                <input type="number" placeholder="请输入验证码" class="input code"
+                :value="code"
+                ref="code" v-on:change="changeCode" v-on:input="changeCode">
+                <input type="button" class="send"  v-model="btnContent"  @click="loginCode"/>
             </div>
-            <div class="login-btn">
+            <div class="login-btn" @click="login">
                 登陆
             </div>
 
@@ -38,15 +42,97 @@ export default {
                 {id: 'qq', name: 'QQ', url: '/images/login/qq.png'},
                 {id: 'weibo', name: '微博', url: '/images/login/sina.png'}
             ],
-                phoneNum:"", //手机号
-                verifyNum:"", //验证码
+                phone: '',  //输入框中的手机号
+                code: '',  //输入框中的验证码
                 btnContent:"获取验证码", //获取验证码按钮内文字
-                time:0, //发送验证码间隔时间
-                disabled:false //按钮状态
+                timingBoard: 60,  //倒计时数
+                isRecede: false,  //判断正在倒计时阶段，不允许用户再点击
+                timer: null,
         }
     },
-    
-
+    methods: {
+            //获取验证码
+            async loginCode() {
+                if (this.isRecede) {
+                    this.error('有用户在夏季八点')
+                }
+                console.log('start login')
+                let result = await (this.phone)
+                // let result = {code:1};
+                console.log('验证码接口 result=', result)
+                if (result.code == 1) {
+                    //成功登录
+                    console.log('请在手机短信查收验证码')
+                    this.isRecede = true
+                    //开始获取验证码倒计时
+                    this.recede()
+                } else {
+                    //登录失败
+                    console.log('获取验证码失败')
+                }
+            },
+            //开始登录
+            async login() {
+                if (!this.phone) {
+                    this.error('请填写手机号');
+                }
+                if (!this.code) {
+                    this.error('请填写验证码');
+                }
+                if (!/^1[345789]\d{9}$/.test(this.phone)) {
+                    this.error('请检查手机号是否正确');
+                }
+                if (!/^[0-9]{4}$/.test(this.code)) {
+                    this.error('验证码不正确')
+                }
+                let result = await (this.phone, this.code)
+                console.log(result)
+                if (result.code == 1) {
+                    console.log('登录成功')
+                } else {
+                    this.code = ''
+                    console.log('登录失败')
+                }
+            },
+            //获取验证码倒计时定时器
+            recede() {
+                this.timer = setInterval(() => {
+                    console.log('开始定时器，', this.timingBoard)
+                    this.codeText = `${this.timingBoard}s`
+                    this.timingBoard--
+                    if (this.timingBoard < 0) {
+                        this.isRecede = false
+                        this.timingBoard = 60
+                        this.codeText = '获取验证码'
+                        clearInterval(this.timer)
+                    }
+                }, 1000)
+            },
+            //稽查手机号输入框的长度
+            changePhone() {
+                if (this.$refs.phone.value.length <= 11) {
+                    this.phone = this.$refs.phone.value
+                } else {
+                    this.$refs.phone.value = this.phone
+                }
+            },
+            //稽查验证码输入框的长度
+            changeCode() {
+                if (this.$refs.code.value.length <= 4) {
+                    this.code = this.$refs.code.value
+                } else {
+                    this.$refs.code.value = this.code
+                }
+            },
+            error(msg) {
+                throw new Error(msg)
+            }
+        },
+        destroyed() {
+            this.phone = '';
+            this.timingBoard = 60;
+            clearInterval(this.timer);
+        }
 }
 </script>
 
@@ -91,7 +177,7 @@ export default {
             border-bottom: 1px solid #ddd;
             font-size: 24px;
             font-family: PingFang-SC-Bold;
-            .get-code{
+            .send{
                 margin-left:50px;
                 border: 1px solid #ddd;
                 width: 113px;
