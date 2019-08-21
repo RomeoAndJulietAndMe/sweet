@@ -31,5 +31,16 @@ export default {
             path:'pass',
             component:()=>import ('../pages/mine/Pass/Pass')
         },
+        {
+            //发布小店
+            path:'substore',
+            component:()=>import ('../pages/mine/Substore/Substore')
+        },
+        {
+            //意见反馈
+            path:'advice',
+            component:()=>import ('../pages/mine/Advice/Advice'),
+            
+        },
     ]
 }

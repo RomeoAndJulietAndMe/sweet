@@ -8,7 +8,7 @@ module.exports = {
                 changeOrigin:true,
             },
             '/myapi':{
-                target:'http://10.36.146.240:9000',
+                target:'http://49.234.28.181:9000',
                 changeOrigin:true,
             }
         }

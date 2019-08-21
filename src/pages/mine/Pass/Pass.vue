@@ -13,8 +13,8 @@
             <div class="item-img">
                 <img :src="item.url" alt="">
             </div>
-            <div class="item-text">
-                <h1>{{item.text1}}</h1>
+            <div class="item-text"> 
+                <h1>{{item.text1}}</h1> 
                 <h2>{{item.text2}}</h2>
                 <h3>{{item.text3}}</h3>
                 <div class="item-text-img">

@@ -40,7 +40,7 @@ export default {
 .tuijian{
     width:100%;
     padding:0 .266667rem;
-    box-sizing:border-box; 
+    box-sizing:border-box;  
     .p3{
         height:1.333333rem;
          line-height: 1.333333rem;
