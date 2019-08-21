@@ -3,11 +3,16 @@ import api from '../../request/api'
 export default {
     namespaced: true,
     state:{
-         navData:[]
+         navData:[],
+          MoreData:[],
     },
     mutations: {
         setDiscoveryNavData(state, params){
             state.navData = params;
+        },
+        setMoreDataAction(state, params){
+            state.MoreData=params;
+            console.log(MoreData)
         },
     },
     actions:{
